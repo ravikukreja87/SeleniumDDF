@@ -16,6 +16,8 @@ public class Reader {
 
 	public void readXLSXFile(String fileName) {
 		InputStream XlsxFileToRead = null;
+
+		//1. Workbook
 		XSSFWorkbook workbook = null;
 		try {
 			XlsxFileToRead = new FileInputStream(fileName);
@@ -28,17 +30,26 @@ public class Reader {
 			e.printStackTrace();
 		}
 
+		//2. Sheet
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		
+		//3. Row
 		XSSFRow row;
+		
+		//4. Cell/Column
 		XSSFCell cell;
 
+		//5. Iterator
 		Iterator<?> rows = sheet.rowIterator();
 
+		
+		//6. Nested Looping the iterator - Row
 		while (rows.hasNext()) {
 			row = (XSSFRow) rows.next();
 
 			Iterator<?> cells = row.cellIterator();
-
+			
+			//7. Loop for column
 			while (cells.hasNext()) {
 				cell = (XSSFCell) cells.next();
 

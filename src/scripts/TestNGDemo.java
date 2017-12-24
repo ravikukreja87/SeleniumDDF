@@ -16,7 +16,7 @@ public class TestNGDemo {
 
 	@DataProvider(name = "Credentials")
 	public static Object[][] credentials() {
-		return new Object[][] { { "Pradnya", "1994" }, { "inc", "Test@123" } };
+		return new Object[][] { { "Pradnya", "1994" }, { "inc", "Test@123" }, { "Pradnya", "Test@123" } };
 	}
 
 	@BeforeMethod
