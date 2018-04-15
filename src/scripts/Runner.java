@@ -57,6 +57,5 @@ public class Runner {
 			}
 		}
 		driver.quit();
-
 	}
 }

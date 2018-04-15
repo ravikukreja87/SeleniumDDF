@@ -58,12 +58,12 @@ public class ReadWrite {
 			password.add(sh1.getRow(2).getCell(1).getStringCellValue());
 
 			// sh1.getRow(0).createCell(2).setCellValue("2.41.0");
-			sh1.getRow(1).createCell(2).setCellValue("This would be written");
-			sh1.getRow(2).createCell(2).setCellValue("2.39");
-			FileOutputStream fout = new FileOutputStream(new File("testdata/credentials.xlsx"));
-			wb.write(fout);
-			fout.close();
-			wb.close();
+//			sh1.getRow(1).createCell(2).setCellValue("This would be written");
+//			sh1.getRow(2).createCell(2).setCellValue("2.39");
+//			FileOutputStream fout = new FileOutputStream(new File("testdata/credentials.xlsx"));
+//			wb.write(fout);
+//			fout.close();
+//			wb.close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
